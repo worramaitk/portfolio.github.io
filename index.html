@@ -503,7 +503,16 @@ document.getElementById("toastbtn").onclick = function() {
            * @function onToggleMode
            * @summary: the event handler attached to the switch. calling @darkMode or @lightMode depending on the checked state.
            */
-           "      * @function getSystemDefaultTheme
+          function onToggleMode() {
+            if (lightSwitch.checked) {
+              darkMode();
+            } else {
+              lightMode();
+            }
+          }
+
+          /**
+           * @function getSystemDefaultTheme
            * @summary: get system default theme by media query
            */
           function getSystemDefaultTheme() {
